@@ -1,0 +1,13 @@
+<h1>Stupid Coaching</h1>
+<% if @answer.downcase == "i am going to work right now!" %>
+    <h2>Your question: <%= @answer %></h2>
+    <h2>Answer: Great!</h2>
+  <% elsif @answer.end_with?("?") %>
+    <h2>Your question: <%= @answer %></h2>
+    <h2>Answer: "Silly question, get dressed and go to work!"</h2>
+  <% else %>
+    <h2>Your question: <%= @answer %></h2>
+    <h2>Answer: "I don't care, get dressed and go to work!"</h2>
+  <% end %>
+
+<%= link_to "Go back to the form", "ask" %>
